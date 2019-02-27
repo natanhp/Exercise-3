@@ -1,0 +1,10 @@
+img{
+    width: 200;
+    height: 200px;
+    float: left;
+    clear: both;
+}
+
+.header{
+    background:orange !important;
+}

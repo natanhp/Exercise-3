@@ -4,18 +4,18 @@ function requestJSON(nama=''){
     .then(data =>{
         var arrayJSON = data.results;
         console.log(arrayJSON);
-        var konten='<tr><th>Nama</th><th>Tinggi</th><th>Berat</th><th>Gender</th>';
+        var konten='<thead><tr class="bg-primary"><th scope="col">Nama</th><th scope="col">Tinggi</th><th scope="col">Berat</th><th scope="col">Gender</th></tr></thead>';
         for(var i = 0; i<arrayJSON.length; i++){
             console.log(i);
             console.log(arrayJSON[i].name);
             if(nama!==''){
                 if(arrayJSON[i].name.includes(nama)){
-                    konten+='<tr><td>' + arrayJSON[i].name + '</td>' +'<td>' + arrayJSON[i].height + '</td>'
+                    konten+='<tr class="bg-warning"><td>' + arrayJSON[i].name + '</td>' +'<td>' + arrayJSON[i].height + '</td>'
                     +'<td>' + arrayJSON[i].mass + '</td>'
                     +'<td>' + arrayJSON[i].gender + '</td>'+'</tr>';
                 }
             }else{
-                konten+='<tr><td>' + arrayJSON[i].name + '</td>' +'<td>' + arrayJSON[i].height + '</td>'
+                konten+='<tr class="bg-warning"><td>' + arrayJSON[i].name + '</td>' +'<td>' + arrayJSON[i].height + '</td>'
             +'<td>' + arrayJSON[i].mass + '</td>'
             +'<td>' + arrayJSON[i].gender + '</td>'+'</tr>';
             }
